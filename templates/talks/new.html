@@ -4,7 +4,8 @@
   <h1 id="">Registry a new talk</h1>
 
   {% from "/helpers/_form_helper.html" import render_field %}
-  <form action="{{ url_for('new_talk') }}" method="post" accept-charset="utf-8">
+  <form action="{{ url_for('create_talk') }}" method="post" accept-charset="utf-8">
+    {{ form.csrf_token }}
     <dl>
       {{ render_field(form.title) }}
       {{ render_field(form.description) }}
