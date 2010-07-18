@@ -11,7 +11,7 @@ class LoginProtectedAction(object):
         try:
             user = users.User()
         except users.UserNotFoundError:
-            self._url = url_for(self.__name__, **kwargs)
+            self._url = url_for(self.__name__, _external = True, **kwargs)
             return redirect(users.create_login_url(self._url))
         else:
             return self._function(*args, **kwargs)
