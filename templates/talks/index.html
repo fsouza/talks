@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 id="">Listing all registered Talks</h1>
+    <ul>
+        {% for talk in talks %}
+            <li>{{ talk.title }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
