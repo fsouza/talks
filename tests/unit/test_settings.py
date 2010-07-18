@@ -14,3 +14,8 @@ def test_import_app():
         from talks_application import app
     except ImportError:
         raise AssertionError('I can\'t import the app!')
+
+def test_app_testing():
+    "App should be in testing mode"
+    from talks_application import app
+    assert_true(app.config['TESTING'])
