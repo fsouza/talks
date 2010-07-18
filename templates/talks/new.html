@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1 id="">Registry a new talk</h1>
+
+  {% from "/helpers/_form_helper.html" import render_field %}
+  <form action="{{ url_for('new_talk') }}" method="post" accept-charset="utf-8">
+    <dl>
+      {{ render_field(form.title) }}
+      {{ render_field(form.description) }}
+      {{ render_field(form.date) }}
+    </dl>
+    <p><input type="submit" value="Save talk"/></p>
+  </form>
+{% endblock %}
