@@ -15,10 +15,6 @@ def index():
     talks = Talk.all().order('-date');
     return render_template('/talks/index.html', talks=talks)
 
-@app.route('/login')
-def redirect_to_login():
-    return redirect(users.create_login_url('/'))
-
 @app.route('/logout')
 def redirect_to_logout():
     return redirect(users.create_logout_url('/'))
@@ -38,7 +34,7 @@ def create_talk():
             title = form.title.data,
             date = form.date.data,
             description = form.description.data,
-            presented_by = users.get_current_user()
+            presented_by = users.User()
         )
         talk.put()
         flash('Talk saved in the database')
