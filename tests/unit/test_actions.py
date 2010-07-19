@@ -33,12 +33,20 @@ class TestActions(unittest.TestCase):
 
     def _mock_complete_form(self):
         form = self.mocker.mock()
-        title_mock = self.mocker.mock()
-        title_mock.data = 'The title'
+        form.title = self.mocker.mock()
+        form.title.data
+        self.mocker.result('The title')
 
-        form.title = title_mock
-        form.date.data = '12/04/2010'
-        form.description.data = 'The description'
+        import datetime
+        date = datetime.datetime.strptime('07/15/2010', '%m/%d/%Y')
+
+        form.date = self.mocker.mock()
+        form.date.data
+        self.mocker.result(datetime.date(year = date.year, month = date.month, day = date.day))
+
+        form.description = self.mocker.mock()
+        form.description.data
+        self.mocker.result('The description')
 
         form.validate_on_submit()
         self.mocker.result(True)
@@ -51,7 +59,7 @@ class TestActions(unittest.TestCase):
         self.mocker.result(True)
 
         mocked_talk = self.mocker.replace('talks_application.models.Talk')
-        mocked_talk()
+        mocked_talk(mocker.KWARGS)
         self.mocker.result(talk)
 
     def test_index_action(self):
@@ -109,7 +117,11 @@ class TestActions(unittest.TestCase):
 
         form = self._mock_complete_form()
         self._mock_talk_form(form)
-        self._mock_google_user()
+
+        mocked_google_user = self.mocker.replace('google.appengine.api.users.User')
+        mocked_google_user()
+        self.mocker.count(1, 2)
+
         self._mock_talk_with_put()
 
         mocked_flash = self.mocker.replace('flask.flash')
@@ -123,7 +135,6 @@ class TestActions(unittest.TestCase):
 
         from talks_application.actions import create_talk
         create_talk()
-        self.mocker.verify()
 
     def tearDown(self):
         self.mocker.restore()
