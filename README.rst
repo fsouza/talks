@@ -8,19 +8,19 @@ Hacking
 
 To start hacking the system, you will need:
 
-    * mocker: ::
+    * mocker:
         $ [sudo] pip install mocker
 
-    * nose: ::
+    * nose:
         $ [sudo] pip install nose
 
-    * selenium: ::
+    * selenium:
         $ svn checkout http://selenium.googlecode.com/svn/trunk/ selenium
 
         $ cd selenium
 
         $ [sudo] python setup.py install
 
-    * lettuce: ::
+    * lettuce:
         $ [sudo] pip install lettuce
 
