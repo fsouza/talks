@@ -16,7 +16,9 @@ To start hacking the system, you will need:
 
     * selenium: ::
         $ svn checkout http://selenium.googlecode.com/svn/trunk/ selenium
+
         $ cd selenium
+
         $ [sudo] python setup.py install
 
     * lettuce: ::
