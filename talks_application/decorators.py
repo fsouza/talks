@@ -1,7 +1,7 @@
 from google.appengine.api import users
 from flask import redirect, url_for
 
-class LoginProtectedAction(object):
+class login_required(object):
 
     def __init__(self, function):
         self._function = function
@@ -16,5 +16,3 @@ class LoginProtectedAction(object):
         else:
             return self._function(*args, **kwargs)
 
-def login_required(f):
-    return LoginProtectedAction(f)
