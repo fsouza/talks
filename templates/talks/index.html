@@ -4,7 +4,7 @@
     <h1 id="">Listing all registered Talks</h1>
     <ul>
         {% for talk in talks %}
-            <li>{{ talk.title }}</li>
+        <li>{{ talk.title }} ({{ talk.date|dateformat }})</li>
         {% endfor %}
     </ul>
 {% endblock %}
