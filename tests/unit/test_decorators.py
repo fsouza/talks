@@ -1,6 +1,5 @@
 import unittest
 import mocker
-from contextlib import nested
 from google.appengine.api import users
 from nose.tools import assert_equals
 
