@@ -10,10 +10,10 @@ div#content {
   border: #999 solid 20px;
   background: #FFF;
   width: 1000px;
-  height: 500px;
+  height: 550px;
   top: 50%;
   left: 50%;
-  margin-top: -260px;
+  margin-top: -290px;
   margin-left: -510px;
 }
 
@@ -92,4 +92,13 @@ div.form_new_talk dd.submit_button input {
   width: 150px;
   border: #000 1px solid;
   background: #EEE;
+}
+
+div.form_new_talk dd ul.errors {
+  display: block;
+}
+
+div.form_new_talk dd ul.errors li {
+  color: #F00;
+  margin: 3px 0 10px 200px;
 }

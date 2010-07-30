@@ -1,5 +1,17 @@
 {% extends "base.html" %}
 
+{% block style %}
+  <link rel="stylesheet" href="/static/css/ui-lightness/jquery-ui-1.8.2.custom.css" type="text/css" media="screen" charset="utf-8"/>
+{% endblock %}
+
+{% block script %}
+  <script src="/static/js/jquery-ui-1.8.2.custom.min.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
+{% block jquery %}
+  $('#date').datepicker();
+{% endblock %}
+
 {% block title %}
   New talk | {{ super() }}
 {% endblock %}
@@ -8,13 +20,16 @@
   <h1 id="">Registry a new talk</h1>
 
   {% from "/helpers/_form_helper.html" import render_field %}
-  <form action="{{ url_for('create_talk') }}" method="post" accept-charset="utf-8">
-    {{ form.csrf_token }}
-    <dl>
-      {{ render_field(form.title) }}
-      {{ render_field(form.description) }}
-      {{ render_field(form.date) }}
-    </dl>
-    <p><input type="submit" value="Save talk"/></p>
-  </form>
+  <div class="form_new_talk">
+    <form action="{{ url_for('create_talk') }}" method="post" accept-charset="utf-8">
+      {{ form.csrf_token }}
+      <dl>
+        {{ render_field(form.title) }}
+        {{ render_field(form.description) }}
+        {{ render_field(form.date) }}
+        <dt></dt>
+        <dd class="submit_button"><input type="submit" value="Save talk"/></dd>
+      </dl>
+    </form>
+  </div>
 {% endblock %}
