@@ -1,104 +1,104 @@
 @import url("reset.css");
 
 body {
-  font-family: "Verdana";
-  background: #EEE;
+    font-family: "Verdana";
+    background: #EEE;
 }
 
 div#content {
-  position: absolute;
-  border: #999 solid 20px;
-  background: #FFF;
-  width: 1000px;
-  height: 550px;
-  top: 50%;
-  left: 50%;
-  margin-top: -290px;
-  margin-left: -510px;
+    position: absolute;
+    border: #999 solid 20px;
+    background: #FFF;
+    width: 1000px;
+    height: 550px;
+    top: 50%;
+    left: 50%;
+    margin-top: -290px;
+    margin-left: -510px;
 }
 
 div#content h1 {
-  padding: 20px 0 20px 15px;
-  font-size: 200%;
+    padding: 20px 0 20px 15px;
+    font-size: 200%;
 }
 
 div#content ul.talk_list {
-  padding: 0 0 0 10px;
+    padding: 0 0 0 10px;
 }
 
 div#content ul.talk_list li {
-  margin: 5px;
+    margin: 5px;
 }
 
 div.menu {
-  position: absolute;
-  background: #EEE;
-  width: 1000px;
-  height: 30px;
-  bottom: 0;
+    position: absolute;
+    background: #EEE;
+    width: 1000px;
+    height: 30px;
+    bottom: 0;
 }
 
 div.menu li {
-  float: left;
-  text-align: center;
-  right: 0;
+    float: left;
+    text-align: center;
+    right: 0;
 }
 
 div.menu li:hover {
-  background: #999;
+    background: #999;
 }
 
 div.menu li a {
-  color: #333;
-  display: block;
-  padding: 8px 20px 8px 20px;
+    color: #333;
+    display: block;
+    padding: 8px 20px 8px 20px;
 }
 
 div.menu li a:hover {
-  color: #FFF;
+    color: #FFF;
 }
 
 div.form_new_talk dt {
-  float: left;
-  clear: both;
-  width: 150px;
-  text-align: right;
-  margin: 3px 10px 0 0;
-  font-size: 16pt;
-  height: 40px;
+    float: left;
+    clear: both;
+    width: 150px;
+    text-align: right;
+    margin: 3px 10px 0 0;
+    font-size: 16pt;
+    height: 40px;
 }
 
 div.form_new_talk dt label {
-  display: block;
-  margin: 10px 0 0 0;
+    display: block;
+    margin: 10px 0 0 0;
 }
 
 div.form_new_talk dd {
-  margin: 3px 0 0 0;
+    margin: 3px 0 0 0;
 }
 
 div.form_new_talk dd input, div.form_new_talk dd textarea {
-  width: 550px;
-  height: 40px;
-  font-size: 16pt;
+    width: 550px;
+    height: 40px;
+    font-size: 16pt;
 }
 
 div.form_new_talk dd textarea {
-  height: 200px;
+    height: 200px;
 }
 
 div.form_new_talk dd.submit_button input {
-  margin: 10px 0 0 0;
-  width: 150px;
-  border: #000 1px solid;
-  background: #EEE;
+    margin: 10px 0 0 0;
+    width: 150px;
+    border: #000 1px solid;
+    background: #EEE;
 }
 
 div.form_new_talk dd ul.errors {
-  display: block;
+    display: block;
 }
 
 div.form_new_talk dd ul.errors li {
-  color: #F00;
-  margin: 3px 0 10px 200px;
+    color: #F00;
+    margin: 3px 0 10px 200px;
 }

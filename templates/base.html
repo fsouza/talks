@@ -12,11 +12,11 @@
         {% endblock %}
         <script src="/static/js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" language="javascript" charset="utf-8">
-        //<![CDATA[
-            $(document).ready(function() {
+//<![CDATA[
+        $(document).ready(function() {
                 {% block jquery %}{% endblock %}
-            });
-        //]]>
+                });
+//]]>
         </script>
         {% block script %}
         {% endblock %}
@@ -31,10 +31,10 @@
                 <ul>
                     <li><a href="{{ url_for('index') }}">Home</a></li>
                     {% if user %}
-                        <li><a href="{{ url_for('new_talk') }}">New talk</a></li>
-                        <li><a href="{{ create_logout_url('/') }}">Logout</a></li>
+                    <li><a href="{{ url_for('new_talk') }}">New talk</a></li>
+                    <li><a href="{{ create_logout_url('/') }}">Logout</a></li>
                     {% else %}
-                        <li><a href="{{ create_login_url(request.url) }}">Login</a></li>
+                    <li><a href="{{ create_login_url(request.url) }}">Login</a></li>
                     {% endif %}
                 </ul>
             </div>
