@@ -6,3 +6,4 @@ app.config.from_object('talks_application.settings')
 
 import actions
 import filters
+import context_processors
