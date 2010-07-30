@@ -57,3 +57,39 @@ div.menu li a {
 div.menu li a:hover {
   color: #FFF;
 }
+
+div.form_new_talk dt {
+  float: left;
+  clear: both;
+  width: 150px;
+  text-align: right;
+  margin: 3px 10px 0 0;
+  font-size: 16pt;
+  height: 40px;
+}
+
+div.form_new_talk dt label {
+  display: block;
+  margin: 10px 0 0 0;
+}
+
+div.form_new_talk dd {
+  margin: 3px 0 0 0;
+}
+
+div.form_new_talk dd input, div.form_new_talk dd textarea {
+  width: 550px;
+  height: 40px;
+  font-size: 16pt;
+}
+
+div.form_new_talk dd textarea {
+  height: 200px;
+}
+
+div.form_new_talk dd.submit_button input {
+  margin: 10px 0 0 0;
+  width: 150px;
+  border: #000 1px solid;
+  background: #EEE;
+}

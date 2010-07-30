@@ -8,6 +8,20 @@
             {% endblock %}
         </title>
         <link rel="stylesheet" href="/static/css/style.css" type="text/css" media="screen" charset="utf-8"/>
+        {% block style %}
+        {% endblock %}
+        <script src="/static/js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" language="javascript" charset="utf-8">
+        //<![CDATA[
+            $(document).ready(function() {
+                {% block jquery %}
+                
+                {% endblock %}
+            });
+        //]]>
+        </script>
+        {% block script %}
+        {% endblock %}
     </head>
     <body id="">
         <div id="content">
