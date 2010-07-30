@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 
+{% block title %}
+  Talks list | {{ super() }}
+{% endblock %}
+
 {% block content %}
     <h1 id="">Listing all registered Talks</h1>
-    <ul>
+    <ul class="talk_list">
         {% for talk in talks %}
         <li>{{ talk.title }} ({{ talk.date|dateformat }})</li>
         {% endfor %}

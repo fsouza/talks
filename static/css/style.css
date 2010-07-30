@@ -1,0 +1,59 @@
+@import url("reset.css");
+
+body {
+  font-family: "Verdana";
+  background: #EEE;
+}
+
+div#content {
+  position: absolute;
+  border: #999 solid 20px;
+  background: #FFF;
+  width: 1000px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  margin-top: -260px;
+  margin-left: -510px;
+}
+
+div#content h1 {
+  padding: 20px 0 20px 15px;
+  font-size: 200%;
+}
+
+div#content ul.talk_list {
+  padding: 0 0 0 10px;
+}
+
+div#content ul.talk_list li {
+  margin: 5px;
+}
+
+div.menu {
+  position: absolute;
+  background: #EEE;
+  width: 1000px;
+  height: 30px;
+  bottom: 0;
+}
+
+div.menu li {
+  float: left;
+  text-align: center;
+  right: 0;
+}
+
+div.menu li:hover {
+  background: #999;
+}
+
+div.menu li a {
+  color: #333;
+  display: block;
+  padding: 8px 20px 8px 20px;
+}
+
+div.menu li a:hover {
+  color: #FFF;
+}
