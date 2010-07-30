@@ -14,9 +14,7 @@
         <script type="text/javascript" language="javascript" charset="utf-8">
         //<![CDATA[
             $(document).ready(function() {
-                {% block jquery %}
-                
-                {% endblock %}
+                {% block jquery %}{% endblock %}
             });
         //]]>
         </script>
@@ -31,8 +29,12 @@
             <div class="menu">
                 <ul>
                     <li><a href="{{ url_for('index') }}">Home</a></li>
-                    <li><a href="{{ url_for('new_talk') }}">New talk</a></li>
-                    <li><a href="{{ create_login_url(request.url) }}">Login</a></li>
+                    {% if user %}
+                        <li><a href="{{ url_for('new_talk') }}">New talk</a></li>
+                        <li><a href="{{ create_logout_url('/') }}">Logout</a></li>
+                    {% else %}
+                        <li><a href="{{ create_login_url(request.url) }}">Login</a></li>
+                    {% endif %}
                 </ul>
             </div>
             {% endblock %}
