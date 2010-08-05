@@ -6,15 +6,14 @@ body {
 }
 
 div#content {
-    position: absolute;
+    position: relative;
     border: #999 solid 20px;
     background: #FFF;
     width: 1000px;
-    height: 550px;
-    top: 50%;
     left: 50%;
-    margin-top: -290px;
+    margin-top: 30px;
     margin-left: -510px;
+    min-height: 250px;
 }
 
 div#content h1 {
@@ -56,6 +55,10 @@ div.menu li a {
 
 div.menu li a:hover {
     color: #FFF;
+}
+
+div.form_new_talk {
+    margin: 0 0 60px 0;
 }
 
 div.form_new_talk dt {
